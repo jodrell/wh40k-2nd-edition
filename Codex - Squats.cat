@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue id="squat-1234-5678-9abc" name="Codex - Squats" revision="1" battleScribeVersion="2.03" authorName="Boff" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+  <readme>Squats are a hardy, technologically advanced race of abhumans who inhabit the galactic core. They are known for their exceptional craftsmanship, advanced technology, and stubborn determination. This catalogue includes the basic Squat units and characters available in Warhammer 40k 2nd Edition.</readme>
+  <categoryEntries>
+    <categoryEntry id="squat-char-001" name="Characters" hidden="false"/>
+    <categoryEntry id="squat-squad-002" name="Squads" hidden="false"/>
+    <categoryEntry id="squat-support-003" name="Support" hidden="false"/>
+  </categoryEntries>
+  <forceEntries>
+    <forceEntry id="squat-force-001" name="Squats" hidden="false">
+      <categoryLinks>
+        <categoryLink id="squat-squad-link" name="Squads" hidden="false" targetId="squat-squad-002" primary="false">
+          <constraints>
+            <constraint field="points" scope="parent" value="25" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-squad-min" type="min"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="squat-char-link" name="Characters" hidden="false" targetId="squat-char-001" primary="false">
+          <constraints>
+            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-char-max" type="max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink id="squat-support-link" name="Support" hidden="false" targetId="squat-support-003" primary="false">
+          <constraints>
+            <constraint field="points" scope="parent" value="50" percentValue="true" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-support-max" type="max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
+  </forceEntries>
+  <entryLinks>
+    <entryLink id="squat-warlord-link" name="Squat Warlord" hidden="false" collective="false" import="true" targetId="squat-warlord-001" type="selectionEntry"/>
+    <entryLink id="squat-engineer-link" name="Squat Engineer" hidden="false" collective="false" import="true" targetId="squat-engineer-002" type="selectionEntry"/>
+    <entryLink id="squat-warrior-link" name="Squat Warriors" hidden="false" collective="false" import="true" targetId="squat-warriors-003" type="selectionEntry"/>
+    <entryLink id="squat-berserker-link" name="Squat Berserkers" hidden="false" collective="false" import="true" targetId="squat-berserkers-004" type="selectionEntry"/>
+    <entryLink id="squat-bike-link" name="Squat Bikes" hidden="false" collective="false" import="true" targetId="squat-bikes-005" type="selectionEntry"/>
+    <entryLink id="squat-trike-link" name="Squat Trikes" hidden="false" collective="false" import="true" targetId="squat-trike-006" type="selectionEntry"/>
+    <entryLink id="squat-gyrocopter-link" name="Squat Gyrocopter" hidden="false" collective="false" import="true" targetId="squat-gyrocopter-007" type="selectionEntry"/>
+    <entryLink id="squat-colossus-link" name="Squat Colossus" hidden="false" collective="false" import="true" targetId="squat-colossus-008" type="selectionEntry"/>
+    <entryLink id="squat-hearthguard-link" name="Squat Hearthguard" hidden="false" collective="false" import="true" targetId="squat-hearthguard-009" type="selectionEntry"/>
+  </entryLinks>
+  <rules>
+    <rule id="squat-stubborn-rule" name="Stubborn" publicationId="squat-codex" page="15" hidden="false">
+      <description>Squats are known for their stubborn nature and determination. Squat units may re-roll failed Break tests once per game.</description>
+    </rule>
+    <rule id="squat-tech-rule" name="Advanced Technology" publicationId="squat-codex" page="16" hidden="false">
+      <description>Squats have access to advanced technology. All Squat vehicles and heavy weapons have a +1 modifier to their armor save.</description>
+    </rule>
+    <rule id="squat-underground-rule" name="Underground Warfare" publicationId="squat-codex" page="17" hidden="false">
+      <description>Squats are masters of underground warfare. Squat infantry units may infiltrate on a roll of 4+ instead of the normal 6+.</description>
+    </rule>
+  </rules>
+  <sharedSelectionEntries>
+    <selectionEntry id="squat-warlord-001" name="Squat Warlord" publicationId="squat-codex" page="25" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warlord-max" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="squat-warlord-profile" name="Squat Warlord" hidden="false" targetId="squat-warlord-stats" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="squat-warlord-cat" name="Characters" hidden="false" targetId="squat-char-001" primary="true"/>
+        <categoryLink id="squat-warlord-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="squat-warlord-armor" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="squat-power-armor">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warlord-armor-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warlord-armor-min" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="squat-power-armor" name="Power Armour" hidden="false" collective="false" import="true" targetId="squat-power-armor-001" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-power-armor-max" type="max"/>
+              </constraints>
+            </entryLink>
+            <entryLink id="squat-termi-armor" name="Terminator Armour" hidden="false" collective="false" import="true" targetId="squat-termi-armor-002" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-termi-armor-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="squat-warlord-weapons" name="Weapons" hidden="false" collective="false" import="true">
+          <entryLinks>
+            <entryLink id="squat-warlord-assault" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="squat-assault-weapons" type="selectionEntryGroup"/>
+            <entryLink id="squat-warlord-special" name="Special Weapons" hidden="false" collective="false" import="true" targetId="squat-special-weapons" type="selectionEntryGroup">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warlord-special-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="squat-warlord-commander" name="Army Commander" hidden="false" collective="false" import="true" targetId="squat-army-commander" type="selectionEntry"/>
+        <entryLink id="squat-warlord-wargear" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="squat-wargear-cards" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warlord-wargear-max" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="squat-warlord-bike" name="Squat Bike" hidden="false" collective="false" import="true" targetId="squat-bike-001" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="85"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-engineer-002" name="Squat Engineer" publicationId="squat-codex" page="26" hidden="false" collective="false" import="true" type="unit">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-engineer-max" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="squat-engineer-profile" name="Squat Engineer" hidden="false" targetId="squat-engineer-stats" type="profile"/>
+        <infoLink id="squat-engineer-rule" name="Technical Expertise" hidden="false" targetId="squat-tech-expertise" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="squat-engineer-cat" name="Characters" hidden="false" targetId="squat-char-001" primary="true"/>
+        <categoryLink id="squat-engineer-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="squat-engineer-armor" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="squat-engineer-armor">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-engineer-armor-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-engineer-armor-min" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="squat-engineer-armor" name="Engineer Armour" hidden="false" collective="false" import="true" targetId="squat-engineer-armor-001" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-engineer-armor-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="squat-engineer-wargear" name="Wargear Cards" hidden="false" collective="false" import="true" targetId="squat-wargear-cards" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-engineer-wargear-max" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="squat-engineer-tools" name="Engineering Tools" hidden="false" collective="false" import="true" targetId="squat-eng-tools" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-engineer-tools-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-engineer-tools-min" type="min"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="65"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-warriors-003" name="Squat Warriors" publicationId="squat-codex" page="30" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="squat-warriors-cat" name="Squads" hidden="false" targetId="squat-squad-002" primary="true"/>
+        <categoryLink id="squat-warriors-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="squat-warrior-model" name="Squat Warrior" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="15" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warrior-max" type="max"/>
+            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warrior-min" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="squat-warrior-profile" name="Squat Warrior" hidden="false" targetId="squat-warrior-stats" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="squat-warriors-armor" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="squat-warrior-armor">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warriors-armor-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warriors-armor-min" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="squat-warrior-armor" name="Carapace Armour" hidden="false" collective="false" import="true" targetId="squat-carapace-armor" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warrior-armor-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup id="squat-warriors-sergeant" name="Sergeant Type" hidden="false" collective="false" import="true" defaultSelectionEntryId="squat-warrior-sergeant">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warriors-sergeant-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warriors-sergeant-min" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="squat-warrior-sergeant" name="Squat Sergeant" hidden="false" collective="false" import="true" targetId="squat-sergeant-001" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warrior-sergeant-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="squat-warriors-heavy" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="squat-heavy-weapons" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warriors-heavy-max" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="squat-warriors-special" name="Special Weapons" hidden="false" collective="false" import="true" targetId="squat-special-weapons" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-warriors-special-max" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-berserkers-004" name="Squat Berserkers" publicationId="squat-codex" page="32" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="squat-berserkers-cat" name="Squads" hidden="false" targetId="squat-squad-002" primary="true"/>
+        <categoryLink id="squat-berserkers-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="squat-berserker-model" name="Squat Berserker" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="12" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-berserker-max" type="max"/>
+            <constraint field="selections" scope="parent" value="8" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-berserker-min" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="squat-berserker-profile" name="Squat Berserker" hidden="false" targetId="squat-berserker-stats" type="profile"/>
+            <infoLink id="squat-berserker-rule" name="Berserker Rage" hidden="false" targetId="squat-berserker-rage" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="squat-berserkers-armor" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="squat-berserker-armor">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-berserkers-armor-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-berserkers-armor-min" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="squat-berserker-armor" name="Light Armour" hidden="false" collective="false" import="true" targetId="squat-light-armor" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-berserker-armor-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="squat-berserkers-assault" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="squat-assault-weapons" type="selectionEntryGroup"/>
+        <entryLink id="squat-berserkers-grenades" name="Grenades" hidden="false" collective="false" import="true" targetId="squat-grenades" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-berserkers-grenades-max" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-bikes-005" name="Squat Bikes" publicationId="squat-codex" page="35" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="squat-bikes-cat" name="Squads" hidden="false" targetId="squat-squad-002" primary="true"/>
+        <categoryLink id="squat-bikes-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+        <categoryLink id="squat-bikes-vehicle" name="Vehicle" hidden="false" targetId="vehicle-category" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="squat-biker-model" name="Squat Biker" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="8" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-biker-max" type="max"/>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-biker-min" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="squat-biker-profile" name="Squat Biker" hidden="false" targetId="squat-biker-stats" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="squat-bikes-armor" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="squat-biker-armor">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-bikes-armor-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-bikes-armor-min" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="squat-biker-armor" name="Biker Armour" hidden="false" collective="false" import="true" targetId="squat-biker-armor-001" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-biker-armor-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="squat-bikes-weapons" name="Bike Weapons" hidden="false" collective="false" import="true" targetId="squat-bike-weapons" type="selectionEntryGroup"/>
+        <entryLink id="squat-bikes-special" name="Special Weapons" hidden="false" collective="false" import="true" targetId="squat-special-weapons" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-bikes-special-max" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-trike-006" name="Squat Trikes" publicationId="squat-codex" page="37" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="squat-trike-cat" name="Support" hidden="false" targetId="squat-support-003" primary="true"/>
+        <categoryLink id="squat-trike-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+        <categoryLink id="squat-trike-vehicle" name="Vehicle" hidden="false" targetId="vehicle-category" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="squat-trike-model" name="Squat Trike" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-trike-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-trike-min" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="squat-trike-profile" name="Squat Trike" hidden="false" targetId="squat-trike-stats" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="squat-trike-weapons" name="Trike Weapons" hidden="false" collective="false" import="true" targetId="squat-trike-weapons" type="selectionEntryGroup"/>
+        <entryLink id="squat-trike-upgrades" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="squat-vehicle-upgrades" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="85"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-gyrocopter-007" name="Squat Gyrocopter" publicationId="squat-codex" page="40" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="squat-gyrocopter-cat" name="Support" hidden="false" targetId="squat-support-003" primary="true"/>
+        <categoryLink id="squat-gyrocopter-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+        <categoryLink id="squat-gyrocopter-flyer" name="Flyer" hidden="false" targetId="flyer-category" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink id="squat-gyrocopter-profile" name="Squat Gyrocopter" hidden="false" targetId="squat-gyrocopter-stats" type="profile"/>
+        <infoLink id="squat-gyrocopter-rule" name="Skimmer" hidden="false" targetId="skimmer-rule" type="rule"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink id="squat-gyrocopter-weapons" name="Gyrocopter Weapons" hidden="false" collective="false" import="true" targetId="squat-gyrocopter-weapons" type="selectionEntryGroup"/>
+        <entryLink id="squat-gyrocopter-upgrades" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="squat-vehicle-upgrades" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="95"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-colossus-008" name="Squat Colossus" publicationId="squat-codex" page="42" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="squat-colossus-cat" name="Support" hidden="false" targetId="squat-support-003" primary="true"/>
+        <categoryLink id="squat-colossus-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+        <categoryLink id="squat-colossus-vehicle" name="Vehicle" hidden="false" targetId="vehicle-category" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink id="squat-colossus-profile" name="Squat Colossus" hidden="false" targetId="squat-colossus-stats" type="profile"/>
+        <infoLink id="squat-colossus-rule" name="Super Heavy" hidden="false" targetId="super-heavy-rule" type="rule"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink id="squat-colossus-weapons" name="Colossus Weapons" hidden="false" collective="false" import="true" targetId="squat-colossus-weapons" type="selectionEntryGroup"/>
+        <entryLink id="squat-colossus-upgrades" name="Vehicle Upgrades" hidden="false" collective="false" import="true" targetId="squat-vehicle-upgrades" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="350"/>
+      </costs>
+    </selectionEntry>
+    
+    <selectionEntry id="squat-hearthguard-009" name="Squat Hearthguard" publicationId="squat-codex" page="45" hidden="false" collective="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink id="squat-hearthguard-cat" name="Squads" hidden="false" targetId="squat-squad-002" primary="true"/>
+        <categoryLink id="squat-hearthguard-squat" name="Squats" hidden="false" targetId="squat-force-001" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="squat-hearthguard-model" name="Squat Hearthguard" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-hearthguard-max" type="max"/>
+            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-hearthguard-min" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="squat-hearthguard-profile" name="Squat Hearthguard" hidden="false" targetId="squat-hearthguard-stats" type="profile"/>
+            <infoLink id="squat-hearthguard-rule" name="Elite Guard" hidden="false" targetId="squat-elite-guard" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="squat-hearthguard-armor" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="squat-hearthguard-armor">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-hearthguard-armor-max" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-hearthguard-armor-min" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="squat-hearthguard-armor" name="Power Armour" hidden="false" collective="false" import="true" targetId="squat-power-armor-001" type="selectionEntry">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-hearthguard-armor-max" type="max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="squat-hearthguard-heavy" name="Heavy Weapons" hidden="false" collective="false" import="true" targetId="squat-heavy-weapons" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-hearthguard-heavy-max" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="squat-hearthguard-special" name="Special Weapons" hidden="false" collective="false" import="true" targetId="squat-special-weapons" type="selectionEntryGroup">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="squat-hearthguard-special-max" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="220"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue> 
