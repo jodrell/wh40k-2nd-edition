@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="25" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="26" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <publications>
@@ -4833,7 +4833,7 @@ When firing that weapon, you may choose to use the Armour-Piercing rounds. You g
       <characteristics>
         <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">6</characteristic>
         <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">12</characteristic>
-        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-1</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
         <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-1</characteristic>
         <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">As Grenade</characteristic>
         <characteristic name="Damage" typeId="8978-f9c3-8957-1481">As Grenade</characteristic>
