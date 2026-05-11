@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="20" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="138e-c671-3180-f615" name="Codex - Ultramarines" revision="21" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>Ultramarines Codex</readme>
   <categoryEntries>
     <categoryEntry id="8be3-6d17-d7d3-faa0" name="Characters" hidden="false"/>
@@ -238,6 +238,12 @@
     <entryLink id="770b-0f6c-3fc5-36e7" name="Legion of the Damned" hidden="false" collective="false" import="true" targetId="f319-a6b6-5a68-93de" type="selectionEntry"/>
     <entryLink id="cb70-5453-cea8-0d26" name="Space Marine Combat Squad" hidden="false" collective="false" import="true" targetId="0255-ad3f-50ec-4514" type="selectionEntry"/>
     <entryLink import="true" name="Chapter Master" hidden="false" id="214d-15af-30a8-b6a6" type="selectionEntry" targetId="5c0d-f1e5-52f5-8d7f"/>
+    <entryLink import="true" name="Legion of the Damned - Centurius &amp; Bodyguard" hidden="false" id="799f-1f82-421c-6d31" type="selectionEntry" targetId="8c27-6929-df67-91fe">
+      <categoryLinks>
+        <categoryLink targetId="3017-162b-c153-6519" id="b6ae-c2ca-c342-9713" primary="true" name="Squads"/>
+        <categoryLink targetId="6186-0c50-3540-dc37" id="cae6-4262-a484-b02d" primary="false" name="Ultramarines"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <rules>
     <rule id="957a-483e-3a28-6e67" name="Break Tests" publicationId="4590-6ba9-5482-a1fa" page="49" hidden="false">
@@ -1699,7 +1705,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf30-f61e-864d-c546" type="max"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="0"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -3899,7 +3905,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <categoryLink id="b476-2c81-ce85-92c5" name="Squads" hidden="false" targetId="3017-162b-c153-6519" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="8da0-b780-e33c-d78a" name="Tactical Marines" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8da0-b780-e33c-d78a" name="Legionnaires" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f005-677f-62be-6765" type="max"/>
             <constraint field="selections" scope="parent" value="9" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f07-89e0-3e80-cbd0" type="min"/>
@@ -3938,7 +3944,11 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </constraints>
           <entryLinks>
             <entryLink id="f58f-2a42-7da6-a686" name="Legion of the Damned Sergeant" hidden="false" collective="false" import="true" targetId="1ac0-7c05-7f9f-853d" type="selectionEntry"/>
-            <entryLink id="385b-da1e-d12d-0067" name="Veteran Sergeant Centurius" hidden="false" collective="false" import="true" targetId="0e4a-f45a-c58e-6800" type="selectionEntry"/>
+            <entryLink id="385b-da1e-d12d-0067" name="Veteran Sergeant Centurius" hidden="false" collective="false" import="true" targetId="0e4a-f45a-c58e-6800" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -3959,11 +3969,7 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a4e-59f7-14ab-858b" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="20c4-f62a-44fb-c31a" name="Special Weapons" hidden="false" collective="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4a4-8db7-bcae-1fa6" type="max"/>
-          </constraints>
-        </entryLink>
+        <entryLink id="20c4-f62a-44fb-c31a" name="Special Weapons" hidden="false" collective="false" import="true" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="390"/>
@@ -4061,9 +4067,9 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
           </constraints>
         </entryLink>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="40"/>
-      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d61-cf95-19ac-6589" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="0255-ad3f-50ec-4514" name="Space Marine Combat Squad" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
@@ -4566,6 +4572,87 @@ If a Space Marine squad  is shaken and fails a  further Break test then it is br
         <categoryLink targetId="8be3-6d17-d7d3-faa0" id="dedb-2f40-8b34-d00f" primary="true" name="Characters"/>
         <categoryLink targetId="6186-0c50-3540-dc37" id="4d1d-d484-bb77-c7dc" primary="false" name="Ultramarines"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Legion of the Damned - Centurius &amp; Bodyguard" hidden="false" id="8c27-6929-df67-91fe">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Legionnaires" hidden="false" id="2bd2-d490-5dc0-61f8" collective="false">
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="c892-c24e-be7e-3611" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="3d47-3717-73f7-1096" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Legion of the Damned" id="92a0-57fd-8101-c620" hidden="false" targetId="7336-eef6-8c3c-0ed3" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Armour" id="1be3-5f22-4478-8aff" hidden="false" collective="false" import="true" defaultSelectionEntryId="8df0-8a18-e032-aeca">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e0d-0f35-f37f-23c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cae3-e0e0-61e0-f5ae" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Power Armour" hidden="false" id="22c5-5970-1bcc-21ee" collective="false" targetId="ccac-ef01-d557-349f" type="selectionEntry">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebd4-a5bf-a8b4-cbf3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Frag Grenade" id="4374-e87f-d283-11d2" hidden="false" targetId="122b-b17a-4e87-5994" type="profile"/>
+                <infoLink name="Bolt Pistol" id="1896-2977-6438-ccec" hidden="false" targetId="3741-3592-b694-79b4" type="profile"/>
+              </infoLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Grenades" id="fc1d-517d-9202-52c7" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Melta Bomb" hidden="false" id="b962-2351-cdce-a5e9" type="selectionEntry" targetId="101f-9872-9b6f-cfc7">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b413-68c3-3664-efc4" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="Melta Bombs for squad" field="name"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Krak Grenade" hidden="false" id="c12d-149c-43ee-1325" collective="false" targetId="7ac5-935d-8ecf-59c0" type="selectionEntry">
+              <modifiers>
+                <modifier type="set" value="Krak Grenades for squad" field="name"/>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d21-06b2-0322-824c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Special Weapons" hidden="false" id="d2d3-375c-3f24-fbb4" collective="false" targetId="717e-c382-eaca-bd29" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Veteran Sergeant Centurius" hidden="false" id="ab21-7a6a-e2aa-793b" collective="false" targetId="0e4a-f45a-c58e-6800" type="selectionEntry">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b46f-978e-943b-9deb" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0f3-3e6d-1dd1-b6b2" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Assault Weapons" hidden="false" id="4da6-2d06-2ade-b603" collective="false" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="196"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6dd9-ca9e-d0a7-6e89" includeChildSelections="true"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fear" id="9bf1-6c5c-776c-af7e" hidden="false" targetId="c7ef-dc7b-3ecc-91f5" type="rule"/>
+        <infoLink name="Legion of the Damned" id="b179-2c8f-0cc3-a59f" hidden="false" targetId="49eb-985e-678f-f554" type="rule"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -6139,7 +6226,7 @@ Turret</characteristic>
     </profile>
     <profile id="7336-eef6-8c3c-0ed3" name="Legion of the Damned" hidden="false" typeId="219f-0faa-a2d8-f766" typeName="Unit">
       <characteristics>
-        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Space Marine</characteristic>
+        <characteristic name="Unit Type" typeId="49de-956f-8797-7436">Legionnaire</characteristic>
         <characteristic name="M" typeId="4934-7872-3dd7-a8b6">4</characteristic>
         <characteristic name="WS" typeId="dc18-b600-96a9-a4a3">5</characteristic>
         <characteristic name="BS" typeId="f859-88a3-fdd3-b298">5</characteristic>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="12" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="13" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -225,6 +225,7 @@
     <entryLink import="true" name="Spleenrippa" hidden="false" id="5adc-ceaa-e298-a54f" type="selectionEntry" targetId="0eef-af07-ec4a-1d01"/>
     <entryLink import="true" name="Bowelburna" hidden="false" id="c238-6874-de10-51ea" type="selectionEntry" targetId="393b-9fd6-4be0-3308"/>
     <entryLink import="true" name="Evil Sunz Gobsmasha" hidden="false" id="d492-b388-26e3-1382" type="selectionEntry" targetId="c4ff-735d-e308-e300"/>
+    <entryLink import="true" name="Ork Wartrukk" hidden="false" id="a607-b6fd-fca5-d478" type="selectionEntry" targetId="78e3-fb14-2529-293e"/>
   </entryLinks>
   <rules>
     <rule id="a5a3-075e-40e2-129d" name="WAAAARGH!" publicationId="9f92-b7df-cf75-9a46" page="49" hidden="false">
@@ -3986,7 +3987,7 @@
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a4b2-4702-9ccb-2242" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="5b61-749c-c834-de7e" name="Wartrak Damage Table" hidden="false" targetId="a2a1-687e-84c1-9e22" type="rule"/>
+        <infoLink id="5b61-749c-c834-de7e" name="Wartrak Damage Table" hidden="false" targetId="77e9-013b-bb0a-8ed6" type="rule"/>
         <infoLink id="20d2-4e13-70ea-1e42" name="Ork Wartrak" hidden="false" targetId="33fc-5fac-167b-0ee2" type="profile"/>
       </infoLinks>
       <categoryLinks>
@@ -7716,6 +7717,66 @@ Weapon*</characteristic>
         </entryLink>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry id="78e3-fb14-2529-293e" name="Ork Wartrukk" hidden="false" collective="false" import="true" type="upgrade" publicationId="8eed-45fd-d4be-9a1b" page="WD 221">
+      <modifiers>
+        <modifier type="set" field="2009-6158-57d7-3b59" value="99">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2009-6158-57d7-3b59" type="max"/>
+      </constraints>
+      <infoLinks>
+        <infoLink id="c551-06c3-efc6-bec3" name="Wartrak Damage Table" hidden="false" targetId="a2a1-687e-84c1-9e22" type="rule"/>
+        <infoLink id="f6db-5ac1-c199-51ab" name="Ork Wartrukk" hidden="false" targetId="65fb-45c3-52c9-af64" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="7131-d0b9-9343-a31f" name="Support" hidden="false" targetId="1cb3-5add-3535-4a1f" primary="true"/>
+        <categoryLink id="f3d0-28aa-a40e-f0cd" name="Orks" hidden="false" targetId="3512-45d3-a466-0e54" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="be9e-e675-c952-ad67" name="Weapon Options" hidden="false" collective="false" import="true" defaultSelectionEntryId="1abb-7aeb-8984-5a00">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b85a-7420-1c35-82a6" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1209-10f8-eef3-e34c" type="min"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="495d-99e3-1f70-dd72" name="Twin Heavy Bolters" hidden="false" collective="false" import="true" targetId="aac3-4788-82a3-a9ad" type="selectionEntry">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="1abb-7aeb-8984-5a00" type="selectionEntry" targetId="4c82-0e56-d20a-6b1c"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2413-9c8e-c38c-ca7f" name="Ork Crew" hidden="false" collective="false" import="true" targetId="4281-ac8c-3182-f16d" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbbd-31d1-5cc8-afcd" type="min"/>
+            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a006-2a06-0591-e048" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="edff-733a-34bf-decc" name="Vehicle Wargear Cards" hidden="false" collective="false" import="true" targetId="ef2e-d2f5-b5d2-60bf" type="selectionEntryGroup"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <profiles>
+        <profile name="Ork Wartrukk" typeId="e609-756e-9d6d-3c69" typeName="Transport" hidden="false" id="8d97-e764-75c9-8e53">
+          <characteristics>
+            <characteristic name="Transport" typeId="517b-f87c-b705-6e9a">Wartrukk (Transport)</characteristic>
+            <characteristic name="Capacity" typeId="9b3e-28dc-77c7-207a">As many models as you can place on the back (no taping/magnets!) </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="5062-76ee-9085-6293" name="Assault Weapons" publicationId="4590-6ba9-5482-a1fa" page="61" hidden="false" collective="false" import="true">
@@ -8655,9 +8716,9 @@ Can be attached to a vehicle (if at least 1 crew memeber is alive) and moved wit
 3-5: Scorcher
 6: Fuel Tank</description>
     </rule>
-    <rule id="a2a1-687e-84c1-9e22" name="Wartrak Damage Table" publicationId="9f92-b7df-cf75-9a46" page="datafax" hidden="false">
-      <description>1-3: Crew*
-4-6: Wartrak
+    <rule id="a2a1-687e-84c1-9e22" name="Wartrukk Damage Table" publicationId="9f92-b7df-cf75-9a46" page="datafax" hidden="false">
+      <description>1-2: Wartrukk
+3-6: Passengers*
 *Hit the passenger nearest the attacker.</description>
     </rule>
     <rule id="e478-9c0d-4966-b20c" name="Warbike Damage Table" publicationId="9f92-b7df-cf75-9a46" page="datafax" hidden="false">
@@ -8686,6 +8747,11 @@ May not decrease his speed compared to a previous turn unless he takes and passe
     </rule>
     <rule id="3c42-2ff1-56b5-ba31" name="Battle Cannon Recoil" publicationId="9f92-b7df-cf75-9a46" page="69" hidden="false">
       <description>Wazdakka and his warbike are pushed D3&quot; directly backwards every time that the battle cannon is fired, and wil collide with any model or obstacle they hit</description>
+    </rule>
+    <rule id="77e9-013b-bb0a-8ed6" name="Wartrak Damage Table" publicationId="9f92-b7df-cf75-9a46" page="datafax" hidden="false">
+      <description>1-3: Crew*
+4-6: Wartrak
+*Hit the passenger nearest the attacker.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -9591,6 +9657,24 @@ Bike</characteristic>
         <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf">3</characteristic>
         <characteristic name="A" typeId="e39a-b0ee-e6d1-e661">1</characteristic>
         <characteristic name="LD" typeId="c751-ec1f-edb8-fd83">9</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="65fb-45c3-52c9-af64" name="Ork Wartrukk" publicationId="8eed-45fd-d4be-9a1b" page="WD 221 - datafax" hidden="false" typeId="371a-1ec9-2157-1eb6" typeName="Vehicle">
+      <characteristics>
+        <characteristic name="Slow Speed" typeId="7c52-da5f-7f1a-95fd">8</characteristic>
+        <characteristic name="Combat Speed" typeId="87a6-dd16-ba8f-ff71">16</characteristic>
+        <characteristic name="Fast Speed" typeId="92f6-98b4-3770-d8d9">30</characteristic>
+        <characteristic name="Type" typeId="8567-afc3-f137-4d64">Wheeled</characteristic>
+        <characteristic name="Crew" typeId="7ee3-c2ef-4b92-55e1">2 Ork Crewman</characteristic>
+        <characteristic name="Ram Strength" typeId="13de-7be1-9f05-c48a">6</characteristic>
+        <characteristic name="Ram Damage" typeId="2ddf-d6d1-359f-bc9d">-3</characteristic>
+        <characteristic name="Ram Save Modfier" typeId="40ae-53ec-dee8-af1f">D6</characteristic>
+        <characteristic name="Armour Location" typeId="30da-ce76-ecb6-61ab">Wartrukk
+Passengers</characteristic>
+        <characteristic name="Front Armour" typeId="fafe-592c-1a65-1376">12
+See Below*</characteristic>
+        <characteristic name="Side/Rear Armour" typeId="fbc3-8073-078a-ac79">12
+See Below*</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

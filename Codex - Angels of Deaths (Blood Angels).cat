@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="12fb-bbf1-3d12-aef9" name="Codex - Angels of Death (Blood Angels)" revision="13" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="12fb-bbf1-3d12-aef9" name="Codex - Angels of Death (Blood Angels)" revision="14" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="d667-1478-0ee6-6183" name="Support" hidden="false"/>
     <categoryEntry id="ea97-27b5-39c7-4630" name="Squads" hidden="false"/>
@@ -4227,15 +4227,18 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
             <entryLink id="e694-2024-25d1-1a09" name="Assault Weapons" hidden="false" collective="false" import="true" targetId="cd0a-6a8d-1f46-a6db" type="selectionEntryGroup"/>
             <entryLink id="35e9-556d-df88-e3e0" name="Boltgun" hidden="false" collective="false" import="true" targetId="0e81-7914-e52a-0a8d" type="selectionEntry">
               <modifiers>
-                <modifier type="increment" field="points" value="3">
+                <modifier type="increment" field="6ae9-e949-0a74-5667" value="1">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4070-b84d-1a95-b41c" repeats="1" roundUp="false"/>
                   </repeats>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ae9-e949-0a74-5667" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ae9-e949-0a74-5667" type="max"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -5358,7 +5361,7 @@ and  courage  in  the face of death. Once broken, a Space Marine squad may rally
             <infoLink id="0247-eff0-af02-58a0" name="Inferno Pistol" hidden="false" targetId="2ed5-584b-ba20-8f2a" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="0"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
       </selectionEntries>

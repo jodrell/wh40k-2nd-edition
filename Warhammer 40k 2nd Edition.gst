@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="26" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="9ea8-c89d-9104-ed03" name="Warhammer 40k 2nd Edition" revision="27" battleScribeVersion="2.03" authorName="Boff" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <comment>Warhammer 2nd Edition 40k</comment>
   <readme>Added more wargear cards</readme>
   <publications>
@@ -1942,23 +1942,24 @@ The number of sustained fire dice a weapon can roll is indicated in its descript
         <cost name="pts" typeId="points" value="6"/>
       </costs>
       <profiles>
-        <profile name="Digi-Lasers" typeId="219f-0faa-a2d8-f766" typeName="Unit" hidden="false" id="57f1-f271-1fd3-4c59">
+        <profile name="Digi-Lasers" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="57f1-f271-1fd3-4c59">
           <characteristics>
-            <characteristic name="Unit Type" typeId="49de-956f-8797-7436"/>
-            <characteristic name="M" typeId="4934-7872-3dd7-a8b6"/>
-            <characteristic name="WS" typeId="dc18-b600-96a9-a4a3"/>
-            <characteristic name="BS" typeId="f859-88a3-fdd3-b298"/>
-            <characteristic name="S" typeId="5916-04ef-0fd1-6557"/>
-            <characteristic name="T" typeId="2e7d-2383-f92f-16f9"/>
-            <characteristic name="W" typeId="ce31-f767-c572-72cc"/>
-            <characteristic name="I" typeId="a9b1-bae9-25d0-fdbf"/>
-            <characteristic name="A" typeId="e39a-b0ee-e6d1-e661"/>
-            <characteristic name="LD" typeId="c751-ec1f-edb8-fd83"/>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">-</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">-</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">3</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-1</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+3</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Digi-Lasers</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <rules>
-        <rule name="New Rule" id="8831-393f-19a2-b829" hidden="false"/>
+        <rule name="Digi-Lasers" id="8831-393f-19a2-b829" hidden="false">
+          <description>Automatically fired at the start of hand-to-hand combat against all opponents in base-to-base contact, before any Attack Dice are rolled and regardless of whose turn it is. Work out the shots as normal. Digi-lasers get 3 shots which may be divided any way you choose against all models in base-to-base contact with the firing model. Once close combat has started the lasers have no further effect.</description>
+        </rule>
       </rules>
     </selectionEntry>
     <selectionEntry id="b00e-bbb9-e4a9-af42" name="Combi-Melta" hidden="false" collective="false" import="true" type="upgrade">
@@ -3357,6 +3358,21 @@ If target is not killed, check to see if on fire on a 4+. Further instructions f
           </costs>
         </entryLink>
       </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Psycannon" hidden="false" id="2437-924a-4a33-ce39">
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32f8-77d5-7e3e-05f5" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="462b-090d-d14f-8654" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Psycannon" id="747c-e376-4d19-6cf2" hidden="false" type="profile" targetId="caae-dcac-0b48-098f"/>
+            <infoLink name="Psycannon" id="5fa1-24dd-9df7-1d9e" hidden="false" type="rule" targetId="1cf0-61f5-271e-01a7"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="52d8-9a1c-a258-0ed7" name="Wargear Cards (Vehicle - Generic)" hidden="false" collective="false" import="true">
       <entryLinks>
@@ -3828,9 +3844,8 @@ See Datafax or Codex: Ultramarines for full rules on firing weapon and misfire t
       <description>Weapon does not need to be recharged like normal plasma</description>
     </rule>
     <rule id="2f39-2846-5e0b-fed5" name="Force Weapons" publicationId="2bb8-b6de-8b70-7f41" page="75" hidden="false">
-      <description>Add the psykers mastery level to your Strength when wounding to roll. 
-Automatically wounds Daemons when they are hit in close combat.
-Negates the unmodified daemonic saving throw</description>
+      <description>Add the psykers mastery level to your Strength when wounding to roll.
+Automatically wounds Daemons when they are hit in close combat. Negates the unmodified daemonic saving throw</description>
     </rule>
     <rule id="0e86-209c-fe59-fe87" name="Frenzy" publicationId="2bb8-b6de-8b70-7f41" page="67" hidden="false">
       <description>See rulebook page 67 - too long to describe</description>
@@ -3917,6 +3932,9 @@ If the pod is going to land on troops they can attempt to either stand their gro
 
 
 If the pod goes off the table any troops it contains can be brought on and make a normal move in the following turn from the point at which it left the table. Deathwind and support pods lost in this way count as victory points for your opponent.</description>
+    </rule>
+    <rule name="Psycannon" id="1cf0-61f5-271e-01a7" hidden="false">
+      <description>Against daemons and psykers, the Psycannon wounds automatically. Counts as a Force Weapon. Each time a psyker or daemon is wounded by a Psycannon, it will lose the use of one randomly-determined psychic power for the rest of the battle.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -4822,7 +4840,7 @@ If the psyker is hit by another psychic attack they ignore the affects on a 4+.<
       <characteristics>
         <characteristic name="Special" typeId="f917-8cd8-7592-47dd">1 use only
 Use with 1 weapon the model is equipped with (chosen before game).
-When firing that weapon, you may choose to use the Armour-Piercing rounds. You gain additional armour penetration dice based on on the Strength of the weapon being used as follow:
+When firing that weapon, you may choose to use the Armour-Piercing rounds. The shot gains -6 armour save modifier. Against vehicles you gain additional armour penetration dice based on on the Strength of the weapon being used as follow:
 1-3: +D3
 4-5: +D6
 6-7: +D12
@@ -5269,6 +5287,19 @@ attack is from the model‘s front 90 arc of sight.</characteristic>
         <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-</characteristic>
         <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">-</characteristic>
         <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Psycannon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="caae-dcac-0b48-098f">
+      <characteristics>
+        <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">8</characteristic>
+        <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">16</characteristic>
+        <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">+2</characteristic>
+        <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">+1</characteristic>
+        <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">4</characteristic>
+        <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+        <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">-2</characteristic>
+        <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+4</characteristic>
+        <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Sustained Fire -1, Force Weapon</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

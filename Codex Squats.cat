@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6583-5ff7-59cc-1fc9" name="Codex - Squats" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="25" revision="1" authorUrl="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6583-5ff7-59cc-1fc9" name="Codex - Squats" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="25" revision="2" authorUrl="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedProfiles>
     <profile name="Squat Warrior" typeId="219f-0faa-a2d8-f766" typeName="Unit" hidden="false" id="d197-46ba-92b5-fa00" publicationId="d829-388d-3717-5aca" page="13">
       <characteristics>
@@ -1357,6 +1357,13 @@ Roll a D6 at the end of the turn:
           <costs>
             <cost name="pts" typeId="points" value="7"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="0" field="points">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="45cf-ec53-ab52-b8a4" shared="true" childName="Hearthguard"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="Refractor Field" hidden="false" id="14f7-2c5b-7655-d4ed" type="selectionEntry" targetId="48c5-f522-8ba5-94e6">
           <costs>

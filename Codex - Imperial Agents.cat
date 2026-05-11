@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="55ab-d359-73e5-0809" name="Codex - Imperial Agents" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="55ab-d359-73e5-0809" name="Codex - Imperial Agents" revision="5" battleScribeVersion="2.03" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="24" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="da81-fc0f-1f03-88bf" name="Characters" hidden="false"/>
     <categoryEntry id="4f4d-36a9-5149-3349" name="Squads" hidden="false"/>
@@ -1008,6 +1008,23 @@
           <constraints>
             <constraint field="selections" scope="parent" value="4" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b298-25cc-e191-990f" type="max"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Nemesis Force Weapon" hidden="true" id="698a-19e1-167c-e25a" type="selectionEntry" targetId="20be-6362-8ed4-9396">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9d43-a036-5991-2470" shared="true" childName="Terminator Armour" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7123-b6ba-87ab-8ca2" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink id="3e7a-dd57-7499-fac2" name="Special Weapons" hidden="false" collective="false" import="true" targetId="9f2c-ca77-0a07-b9d6" type="selectionEntryGroup">
           <constraints>
@@ -1340,7 +1357,6 @@
     <selectionEntry id="89f6-08ba-21de-93f6" name="Grey Knight Terminator Squad" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="8d48-309f-ece5-bec5" name="Grey Knight Psychology" hidden="false" targetId="83e8-8e94-f116-5e2a" type="rule"/>
-        <infoLink id="3fad-63cd-78d7-4523" name="Nemesis Force Weapon" hidden="false" targetId="c846-6137-427c-b7a6" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b0d7-78cf-0eac-a8d0" name="Squads" hidden="false" targetId="4f4d-36a9-5149-3349" primary="false"/>
@@ -1376,12 +1392,6 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7105-eef5-ac05-c4a6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dde7-fe32-541a-82a9" type="min"/>
-          </constraints>
-        </entryLink>
-        <entryLink id="e273-4d3c-bec6-e012" name="Storm Bolter" hidden="false" collective="false" import="true" targetId="8b0c-9093-dc69-c9e8" type="selectionEntry">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="13c6-bdd2-fd7a-5c3c" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b367-8921-acc6-72b5" type="min"/>
           </constraints>
         </entryLink>
         <entryLink id="4088-ab1b-d204-de76" name="Psyker" hidden="false" collective="false" import="true" targetId="56e9-7608-b945-ac81" type="selectionEntry">
@@ -1432,6 +1442,12 @@
           </selectionEntryGroups>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b5b6-ddc7-e723-6263" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="2219-82e9-fcd4-63d5" type="selectionEntry" targetId="20be-6362-8ed4-9396">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="17a9-084a-a756-b888" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6082-454e-c1e5-766b" includeChildSelections="false"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -2438,6 +2454,40 @@ See datafax for damage table</description>
         </rule>
         <rule name="Knockback" id="6612-5484-6d42-6b22" hidden="false" publicationId="06e5-8e36-e8c8-aec3" page="31">
           <description>If  a  target  is  hit   by  a  shotgun  but  not  slain,  then  it  is automatically  knocked back 2&quot; and will fall  over on a  D6  roll of  4+.  A  knocked  over  model must spend  its  next movement phase standing up. Note that  this  rule  only  affects  ordinary troopers - not vehicles, robots, Terminators or dreadnoughts.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="20be-6362-8ed4-9396">
+      <entryLinks>
+        <entryLink import="true" name="Storm Bolter" hidden="false" id="e91b-5315-a04d-9bb3" type="selectionEntry" targetId="8b0c-9093-dc69-c9e8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49f6-514b-3289-266e" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6600-03ec-d71b-cb19" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Nemesis Force Weapon" typeId="d8e8-6c66-f558-30ee" typeName="Weapon" hidden="false" id="2556-f299-6cdb-ee33">
+          <characteristics>
+            <characteristic name="Short range" typeId="a108-ac67-8c42-6bbb">CC Only</characteristic>
+            <characteristic name="Long Range" typeId="3acf-5fa0-de29-6094">CC Only</characteristic>
+            <characteristic name="Short &apos;To Hit’" typeId="bbc0-6de5-4dfa-9328">-</characteristic>
+            <characteristic name="Long &apos;To Hit’" typeId="10bb-0500-b03c-643c">-</characteristic>
+            <characteristic name="Strength" typeId="e297-34fa-4b72-f0b6">User</characteristic>
+            <characteristic name="Damage" typeId="8978-f9c3-8957-1481">1</characteristic>
+            <characteristic name="Save Modifier" typeId="53ec-cd58-3d6e-c00d">as Str</characteristic>
+            <characteristic name="Armour Penetration" typeId="0530-f4b7-b7db-de67">D6+5</characteristic>
+            <characteristic name="Special" typeId="9fb9-b2be-dfa5-713d">Parry, Force Weapon, Nemesis Blade</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Parry" id="cf0d-0beb-daee-3058" hidden="false" type="rule" targetId="049d-3ed2-a1bf-86b0"/>
+        <infoLink name="Force Weapons" id="8cf3-176c-66a3-2e9a" hidden="false" type="rule" targetId="2f39-2846-5e0b-fed5"/>
+      </infoLinks>
+      <rules>
+        <rule name="Nemesis Blade" id="c963-492a-1f5b-029e" hidden="false">
+          <description>Stored Force Cards may be expended during close combat to cause additional wounds to daemons — D3 if one Force Card is used, D6 if two Force Cards are used.</description>
         </rule>
       </rules>
     </selectionEntry>
