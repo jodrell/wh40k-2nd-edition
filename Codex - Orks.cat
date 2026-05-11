@@ -2096,6 +2096,7 @@
             <cost name="pts" typeId="points" value="13"/>
           </costs>
         </entryLink>
+        <entryLink import="true" name="Assault Weapons" hidden="false" id="3d22-2148-0dd1-bc5b" collective="false" targetId="5062-76ee-9085-6293" type="selectionEntryGroup"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
