@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="14" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="82c6-3e15-54c5-a35f" name="Codex - Orks" revision="15" battleScribeVersion="2.03" authorName="Boff" authorContact="https://github.com/BSData/wh40k-2nd-edition" authorUrl="https://github.com/BSData/wh40k-2nd-edition" library="false" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="23" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <categoryEntries>
     <categoryEntry id="23ab-e52d-6e65-01d5" name="Characters" hidden="false"/>
     <categoryEntry id="f72b-82f4-2a38-7d26" name="Mobs" hidden="false"/>
@@ -3588,14 +3588,20 @@
     </selectionEntry>
     <selectionEntry id="546b-5a19-135d-52d4" name="Pulsa Rokkit" hidden="false" collective="false" import="true" type="upgrade">
       <modifiers>
-        <modifier type="set" field="462b-ab25-80ab-8b52" value="99">
+        <modifier type="set" value="99" field="462b-ab25-80ab-8b52">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="4239-fecc-9d06-d706" type="atLeast"/>
-                <condition field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="e3c7-9896-d918-9c99" type="atLeast"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dac2-9fb5-5933-86a3" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="4239-fecc-9d06-d706" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1d11-1731-2b68-cf33" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e3c7-9896-d918-9c99" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>

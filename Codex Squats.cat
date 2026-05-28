@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6583-5ff7-59cc-1fc9" name="Codex - Squats" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="25" revision="2" authorUrl="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6583-5ff7-59cc-1fc9" name="Codex - Squats" gameSystemId="9ea8-c89d-9104-ed03" gameSystemRevision="25" revision="3" authorUrl="https://github.com/BSData/wh40k-2nd-edition" authorName="Boff89" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedProfiles>
     <profile name="Squat Warrior" typeId="219f-0faa-a2d8-f766" typeName="Unit" hidden="false" id="d197-46ba-92b5-fa00" publicationId="d829-388d-3717-5aca" page="13">
       <characteristics>
@@ -429,6 +429,21 @@ Lascannon</characteristic>
       <infoLinks>
         <infoLink name="Warlord" id="61e9-a3ff-2ec1-0f66" hidden="false" type="profile" targetId="4e23-b58a-0f8a-94f4"/>
       </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Squat Bike" id="0694-306e-3ada-d84f" hidden="false">
+          <comment>Squat Bike</comment>
+          <entryLinks>
+            <entryLink import="true" name="Squat Bike" hidden="false" id="55a4-4ac7-3111-1660" type="selectionEntry" targetId="ddab-c0b4-c032-9b83">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1935-3b0a-f0a3-5475" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Squat Exo-armour" hidden="false" id="7d9d-c70a-7882-f582">
       <profiles>
@@ -508,6 +523,21 @@ Lascannon</characteristic>
         <categoryLink targetId="e206-c273-bb7e-6132" id="7a4b-e5f6-ed76-a443" primary="false" name="Squats"/>
         <categoryLink targetId="909c-af95-a2b2-da83" id="9e86-38a2-a34c-2183" primary="true" name="Characters"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Squat Bike" id="01d4-dc43-cfd2-3c35" hidden="false">
+          <comment>Squat Bike</comment>
+          <entryLinks>
+            <entryLink import="true" name="Squat Bike" hidden="false" id="5fde-637b-b637-a3fc" type="selectionEntry" targetId="ddab-c0b4-c032-9b83">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3377-04c8-4dfc-8e71" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Hearthguard" hidden="false" id="45cf-ec53-ab52-b8a4">
       <costs>
@@ -553,6 +583,21 @@ Lascannon</characteristic>
         <categoryLink targetId="909c-af95-a2b2-da83" id="00c1-db6a-61f7-71aa" primary="true" name="Characters"/>
         <categoryLink targetId="e206-c273-bb7e-6132" id="95d3-312e-6ca4-5046" primary="false" name="Squats"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Squat Bike" id="6779-9768-bf89-59ed" hidden="false">
+          <comment>Squat Bike</comment>
+          <entryLinks>
+            <entryLink import="true" name="Squat Bike" hidden="false" id="df48-2fb5-f42b-7ab4" type="selectionEntry" targetId="ddab-c0b4-c032-9b83">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c52-bbd1-fa1d-a7f2" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Engineer Guildmaster" hidden="false" id="240f-67e6-cede-e2cc">
       <costs>
@@ -622,6 +667,21 @@ Roll a D6 at the end of the turn:
 1-2: Hopeless, the damage is beyond erpair</description>
         </rule>
       </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Squat Bike" id="4e8a-a5bf-7ba2-b57e" hidden="false">
+          <comment>Squat Bike</comment>
+          <entryLinks>
+            <entryLink import="true" name="Squat Bike" hidden="false" id="faf5-31b0-b978-59aa" type="selectionEntry" targetId="ddab-c0b4-c032-9b83">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2470-11ca-536f-5d31" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ancestor Lord" hidden="false" id="643c-0f77-aca9-a901">
       <constraints>
@@ -726,6 +786,21 @@ Roll a D6 at the end of the turn:
           <description>Add +D3 to your army&apos;s strategy rating</description>
         </rule>
       </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Squat Bike" id="d361-0b5f-211d-b9a0" hidden="false">
+          <comment>Squat Bike</comment>
+          <entryLinks>
+            <entryLink import="true" name="Squat Bike" hidden="false" id="dc9f-ccd5-c0e0-e9a6" type="selectionEntry" targetId="ddab-c0b4-c032-9b83">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="179c-792a-b33e-05d1" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warrior Squad" hidden="false" id="1601-d697-54e5-92db">
       <costs>
@@ -1359,9 +1434,16 @@ Roll a D6 at the end of the turn:
           </costs>
           <modifiers>
             <modifier type="set" value="0" field="points">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="45cf-ec53-ab52-b8a4" shared="true" childName="Hearthguard"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="062f-a7ff-7495-296a" shared="true" childName="Hearthguard" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9bba-059c-3dac-8db1" shared="true" childName="Warlord" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e073-b19b-c3fe-d84f" shared="true" childName="Battle Standard" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="4122-7124-06c6-72ab" shared="true" childName="Ancestor Lord" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
